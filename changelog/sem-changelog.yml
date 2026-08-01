@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://api-doc.xiaoe-tech.com/log.html
+description: >-
+  Recent entries from the Xiaoe Open API changelog (更新日志). Xiaoe versions
+  individual interfaces (e.g. product-list 2.0, live-broadcast-list 2.0) rather
+  than a single global API version; entries below are the recent window
+  captured from the live changelog.
+scheme: per-interface versioning (dated changelog)
+entries:
+- date: '2025-12-22'
+  highlights: Mini-program SDK integration docs updated with domain configuration
+    paths and query-page screenshots.
+- date: '2025-12-19'
+  additions: Clock-in (sign-in) management APIs gained new response fields
+    (comment IDs, like-record IDs).
+- date: '2025-12-05'
+  additions: New API to query sub-course lists in product management.
+- date: '2024-06-26'
+  additions: New employee-and-department search API for enterprise training platforms.
+- date: '2024-06-18'
+  additions: New live-broadcast list API v2.0 plus product-management APIs for
+    course structure queries and batch operations.
+- date: '2024-06-14'
+  additions: Service-provider login management plus live-streaming data-analytics
+    APIs (user marketing, interaction, viewing metrics).
+- date: '2024-06-06'
+  additions: Two live-broadcast invitation-management APIs (invitation plans,
+    user participation lists).
+- date: '2023-12-25'
+  additions: Bulk retrieval for information-collection order associations.
+- date: '2023-12-20'
+  additions: API to retrieve community member lists within circle management.
+- date: '2023-12-12'
+  additions: Product-listing API v2.0 gained start/end time-range filtering.

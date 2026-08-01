@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://api-doc.xiaoe-tech.com/common_problem/code.html
+format: xiaoe-code-msg-data
+description: >-
+  Xiaoe Open API global return codes. The response envelope is
+  {code, msg, data}: code 0 = success, code < 0 = system-level errors
+  (signature / permission / credential), code > 0 = business-logic errors.
+  Codes below captured verbatim from the global return-code reference.
+envelope:
+  code: integer status indicator (0 success)
+  msg: human-readable message
+  data: response payload object
+categories:
+  success: code == 0
+  system_error: code < 0 (signatures, credentials, permissions)
+  business_error: code > 0 (business logic)
+codes:
+- code: 1001
+  meaning: System busy
+- code: 1002
+  meaning: Business interface return format error
+- code: 2001
+  meaning: Missing app_id parameter
+- code: 2002
+  meaning: Invalid app_id parameter
+- code: 2003
+  meaning: Missing secret_key parameter
+- code: 2004
+  meaning: secret_key incorrect, or app_id invalid
+- code: 2005
+  meaning: Missing grant_type parameter
+- code: 2007
+  meaning: Missing access_token credential
+- code: 2008
+  meaning: access_token expired or does not exist
+- code: 2009
+  meaning: Missing user_id parameter
+- code: 2010
+  meaning: Invalid user_id
+- code: 2017
+  meaning: No permission to call this interface
+- code: 2051
+  meaning: IP not whitelisted
+- code: 2052
+  meaning: API not provided or URL unregistered
+- code: 2053
+  meaning: API call limit reached
+- code: 2054
+  meaning: API request spike detected
+- code: 2055
+  meaning: Invalid request method

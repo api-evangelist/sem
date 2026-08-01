@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://api-doc.xiaoe-tech.com/
+description: >-
+  Cross-cutting request/response conventions for the Xiaoe Open API: the
+  access_token auth style, the code/msg/data response envelope, rate-limit
+  signaling, and the encrypted message-push (webhook) event model. Xiaoe does
+  NOT document an idempotency-key contract, so no idempotency guarantee is
+  asserted here.
+base_url: https://api.xiaoe-tech.com
+api_style: REST-style over HTTPS, JSON responses
+authentication:
+  scheme: access_token obtained from GET /token, passed on subsequent calls
+  detail: authentication/sem-authentication.yml
+error_envelope:
+  fields: [code, msg, data]
+  success: code == 0
+  system_errors: code < 0
+  business_errors: code > 0
+  detail: errors/sem-error-codes.yml
+idempotency:
+  supported: false
+  note: No idempotency-key header/parameter is documented by the provider.
+pagination:
+  style: page-based (page_index / page_size style parameters vary per endpoint)
+  note: Pagination parameters are documented per-operation, not globally.
+rate_limiting:
+  documented: true
+  token_endpoint: 100 requests per 10 minutes
+  signaling: return code 2053 (API call limit reached) / 2054 (request spike)
+  detail: rate-limits/sem-rate-limits.yml
+versioning:
+  scheme: per-operation version suffix in interface names (e.g. list 2.0, live 2.0)
+webhooks:
+  supported: true
+  transport: POST of AES-encrypted XML to a merchant-configured callback URL
+  ack: respond with the string "success" within 5 seconds
+  retry: 5min, 30min, 1h, 6h, 1d (5 attempts) then dropped
+  detail: asyncapi/sem-message-push-webhooks.yml

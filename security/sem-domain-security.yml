@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.xiaoe-tech.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 28 00:59:59 2027 GMT
+  hsts: false
+- host: api-doc.xiaoe-tech.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 28 00:59:59 2027 GMT
+  hsts: false
+- host: api.xiaoe-tech.com
+  https: false
+domains:
+- domain: xiaoe-tech.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

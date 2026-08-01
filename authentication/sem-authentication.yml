@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://api-doc.xiaoe-tech.com/develop_guide/get_access_token.html
+description: >-
+  Xiaoe Open API authentication. Applications are created and authorized in the
+  Xiaoe cloud console, then exchange app credentials for a short-lived
+  access_token that is passed on every subsequent API call. There is no OAuth2
+  authorization-code / scope model — permissions are granted per-interface in
+  the console and enforced server-side (return code 2017 on missing permission),
+  with optional IP whitelisting (return code 2051).
+summary:
+  types: [access_token]
+  token_endpoint: https://api.xiaoe-tech.com/token
+  oauth2_flows: []
+  api_key_in: [query]
+token:
+  endpoint: GET https://api.xiaoe-tech.com/token
+  params:
+    app_id: Store business identifier
+    client_id: Application unique identifier
+    secret_key: Application credential secret
+    grant_type: Fixed value client_credential
+  grant_type: client_credential
+  ttl_seconds: 7200
+  refresh: >-
+    Requests with >30 min remaining return the same token; below 30 min a new
+    token is issued while the old remains briefly valid. Token endpoint is rate
+    limited to 100 requests per 10 minutes.
+  response_fields: [access_token, expires_in]
+permissions:
+  model: per-interface authorization granted in the Xiaoe cloud console
+  ip_whitelist: supported (return code 2051 when caller IP is not whitelisted)
+docs: https://api-doc.xiaoe-tech.com/develop_guide/get_access_token.html

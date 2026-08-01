@@ -1,8 +1,32 @@
 aid: sem
-name: sem
-description: sem is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Xiaoe (小鹅通)
+description: >-
+  Xiaoe (小鹅通), operated by Shenzhen Xiaoe Network Technology Co., Ltd., is a
+  Chinese private-domain (私域) marketing and content-commerce SaaS platform that
+  helps businesses convert public-channel audiences into owned WeChat-based
+  channels. Its product suite spans knowledge/course delivery, live-streaming
+  e-commerce, a mini-program mall, enterprise SCRM, training academies, community
+  circles, points/loyalty, and promoter (affiliate) programs across 20+
+  industries. Xiaoe exposes an Open API (开放API) at api.xiaoe-tech.com covering
+  users, products, orders, payments, live broadcasts, learning data, marketing
+  and points, using access_token authentication, a code/msg/data response
+  envelope, and an encrypted message-push (webhook) event system. The "sem"
+  subdomain is Xiaoe's search-marketing landing surface; the company was
+  surfaced as a portfolio company of Qiming Venture Partners.
 url: https://raw.githubusercontent.com/api-evangelist/sem/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.xiaoe-tech.com/favicon.ico
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,15 +35,72 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- SaaS
+- Private Domain
+- Content Commerce
+- Live Streaming
+- Education
+- E-Commerce
+- Marketing
+- WeChat
+- China
+apis:
+- name: Xiaoe Open API
+  description: >-
+    Xiaoe's Open API (开放API) for integrating store data and operations —
+    users, products, orders, refunds, live broadcasts, learning/course data,
+    marketing (coupons, group-buy, promoters) and points — into third-party
+    systems. Uses access_token auth (GET /token with app_id, client_id,
+    secret_key, grant_type=client_credential; 2h TTL) and a code/msg/data
+    response envelope.
+  humanURL: https://api-doc.xiaoe-tech.com/
+  baseURL: https://api.xiaoe-tech.com
+  properties:
+  - type: Documentation
+    url: https://api-doc.xiaoe-tech.com/
+  - type: APIReference
+    url: https://api-doc.xiaoe-tech.com/api_list.html
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/sem-domain-security.yml
 - type: Website
-  url: https://sem.xiaoe-tech.com
+  url: https://www.xiaoe-tech.com
+- type: DeveloperPortal
+  url: https://cloud.xiaoe-tech.com/
+- type: Documentation
+  url: https://api-doc.xiaoe-tech.com/
+- type: APIReference
+  url: https://api-doc.xiaoe-tech.com/api_list.html
+- type: GettingStarted
+  url: https://api-doc.xiaoe-tech.com/read_before/access_guide.html
+- type: ChangeLog
+  url: https://api-doc.xiaoe-tech.com/log.html
+- type: ChangeLog
+  url: changelog/sem-changelog.yml
+- type: Authentication
+  url: authentication/sem-authentication.yml
+- type: ErrorCatalog
+  url: errors/sem-error-codes.yml
+- type: Conventions
+  url: conventions/sem-conventions.yml
+- type: Webhooks
+  url: asyncapi/sem-message-push-webhooks.yml
+- type: Packages
+  url: packages/sem-packages.yml
+- type: SDKs
+  url: packages/sem-packages.yml
+- type: RateLimits
+  url: rate-limits/sem-rate-limits.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

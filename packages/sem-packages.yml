@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://api-doc.xiaoe-tech.com/recall_scene.html
+description: >-
+  Xiaoe first-party client SDKs. These are embed/integration SDKs (documented
+  by Xiaoe) rather than package-registry client libraries — they embed Xiaoe
+  content and flows into native apps, web pages, and WeChat mini-programs using
+  access_token auth. No public npm/Maven/CocoaPods coordinates are published on
+  the docs; each entry links to its official integration guide.
+packages:
+- language: java
+  platform: android
+  registry: none
+  name: Xiaoe Android SDK
+  url: https://api-doc.xiaoe-tech.com/recall_scene/lnline_sdk/android_sdk.html
+  official: true
+- language: swift
+  platform: ios
+  registry: none
+  name: Xiaoe iOS SDK
+  url: https://api-doc.xiaoe-tech.com/recall_scene/lnline_sdk/ios_sdk.html
+  official: true
+- language: javascript
+  platform: web-h5
+  registry: none
+  name: Xiaoe Web/H5 SDK
+  url: https://api-doc.xiaoe-tech.com/recall_scene/lnline_sdk/h5_sdk.html
+  official: true
+- language: javascript
+  platform: wechat-miniprogram
+  registry: none
+  name: Xiaoe Mini-Program SDK
+  url: https://api-doc.xiaoe-tech.com/recall_scene/lnline_sdk/mini_sdk.html
+  official: true

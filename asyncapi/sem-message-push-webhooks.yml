@@ -1,0 +1,68 @@
+generated: '2026-07-21'
+method: searched
+source: https://api-doc.xiaoe-tech.com/news_push.html
+spec_type: Webhooks
+description: >-
+  Xiaoe message-push (消息推送) webhook catalog. When a subscribed event fires,
+  the Xiaoe platform POSTs an AES-encrypted XML data packet to a
+  merchant-configured callback URL. The receiver must reply with the literal
+  string "success" within 5 seconds; otherwise Xiaoe retries at 5min, 30min,
+  1h, 6h and 1d (5 attempts total) before dropping the message. Configuration
+  requires a 16-char verification Token, a 43-char encryption key, and a
+  receiving URL set in the Xiaoe cloud console. Xiaoe ships encrypt/decrypt
+  SDKs for signature verification and payload decryption.
+delivery:
+  transport: HTTP POST of AES-encrypted XML to merchant callback URL
+  ack: respond with string "success" within 5 seconds
+  retry: [5m, 30m, 1h, 6h, 1d]
+  max_attempts: 5
+  security:
+    verification_token_len: 16
+    encryption_key_len: 43
+    encryption: AES
+events:
+- name: 订单状态推送
+  en: Order status changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/order_change_state.html
+- name: 订单支付推送
+  en: Order paid
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/order_push.html
+- name: 订单售后状态推送
+  en: Order refund / after-sales status changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/order_refund_push.html
+- name: 用户注册推送
+  en: User registered
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/user_register.html
+- name: 用户手机号变更推送
+  en: User phone number changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/phone_update.html
+- name: 用户状态变更推送
+  en: User status changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/status_update.html
+- name: 用户标签变更消息推送
+  en: User tag changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/user_tag_change.html
+- name: 账号合并推送
+  en: Account merged
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/account_merge_push.html
+- name: 积分变更消息推送
+  en: Points balance changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/point_push.html
+- name: 商品变更推送
+  en: Product changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/goods_change_push.html
+- name: 权益变更推送
+  en: Entitlement / role changed
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/role_change_push.html
+- name: 优惠券消息推送
+  en: Coupon event
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/coupon_push.html
+- name: 考试消息推送
+  en: Exam event
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/examination_push.html
+- name: 活动签到推送
+  en: Activity sign-in
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/activity_sign_push.html
+- name: 信息采集推送
+  en: Information-collection form submitted
+  docs: https://api-doc.xiaoe-tech.com/api_list/news_push/info_collect_push.html

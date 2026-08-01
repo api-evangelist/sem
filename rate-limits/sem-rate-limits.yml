@@ -1,0 +1,27 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: Xiaoe
+providerId: sem
+generated: '2026-07-21'
+method: searched
+created: '2026-07-21'
+modified: '2026-07-21'
+tags:
+- Rate Limiting
+- China
+description: >-
+  Xiaoe Open API rate limiting. The access_token endpoint is capped at 100
+  requests per 10 minutes. General API call limits are enforced server-side and
+  surfaced through the return-code envelope rather than published per-endpoint;
+  exceeding them returns business return codes 2053 (limit reached) and 2054
+  (request spike detected).
+source: https://api-doc.xiaoe-tech.com/develop_guide/get_access_token.html
+responseCodes:
+  limitReached: 2053
+  requestSpike: 2054
+limits:
+- name: access_token endpoint
+  scope: application
+  metric: requests
+  limit: 100
+  timeFrame: 10 minutes
