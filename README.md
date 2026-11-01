@@ -1,4 +1,4 @@
-# sem
+# Xiaoe (小鹅通)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-sem is a company surfaced as a portfolio company of qiming and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Xiaoe (小鹅通), operated by Shenzhen Xiaoe Network Technology Co., Ltd., is a Chinese private-domain (私域) marketing and content-commerce SaaS platform that helps businesses convert public-channel audiences into owned WeChat-based channels. Its product suite spans knowledge/course delivery, live-streaming e-commerce, a mini-program mall, enterprise SCRM, training academies, community circles, points/loyalty, and promoter (affiliate) programs across 20+ industries. Xiaoe exposes an Open API (开放API) at api.xiaoe-tech.com covering users, products, orders, payments, live broadcasts, learning data, marketing and points, using access_token authentication, a code/msg/data response envelope, and an encrypted message-push (webhook) event system. The "sem" subdomain is Xiaoe's search-marketing landing surface; the company was surfaced as a portfolio company of Qiming Venture Partners.
 
-Backed by: qiming — https://sem.xiaoe-tech.com
+**Areas:** Company · Software-as-a-Service · Private Domain · Content Commerce · Live Streaming · Education · E-Commerce · Marketing · WeChat · China
+
+## Xiaoe (小鹅通) on APIs.io
+
+Everything profiled for Xiaoe (小鹅通) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sem/](https://apis.io/providers/sem/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Xiaoe Open API](https://apis.io/apis/sem/xiaoe-open-api/) — Xiaoe's Open API (开放API) for integrating store data and operations — users, products, orders, refunds, live broadcasts, learning/course data, marketing…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Sem Message Push Webhooks](https://apis.io/asyncapis/sem/sem-message-push-webhooks/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Sem Authentication](https://apis.io/security/sem/sem-authentication/)
+- [Sem Domain Security](https://apis.io/security/sem/sem-domain-security/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Sem Rate Limits](https://apis.io/rate-limits/sem/sem-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.xiaoe-tech.com)
+- [Documentation](https://api-doc.xiaoe-tech.com/)
+- [Getting started](https://api-doc.xiaoe-tech.com/read_before/access_guide.html)
+- [API reference](https://api-doc.xiaoe-tech.com/api_list.html)
+- [Changelog](https://api-doc.xiaoe-tech.com/log.html)
+
+## API Evangelist rating
+
+**Kin Score 32.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 0.0 |
+
+**Agent readiness 25.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/sem/](https://apis.io/providers/sem/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Xiaoe (小鹅通): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sem/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
